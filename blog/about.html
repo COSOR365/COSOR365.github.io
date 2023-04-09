@@ -102,28 +102,17 @@
 
         
           
-            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+var gitalk = new Gitalk({
+  clientID: '4162250806ff2a1b0891',
+  clientSecret: '06294e7782d24c321d3af0b40b6841af35dadf3c',
+  repo: 'blogpinglun',
+  owner: 'COSOR365',
+  admin: ['GitHub repo owner and collaborators, only these guys can initialize github issues'],
+  id: beta,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
 
-<div id="gitalk-container"><div class="gt-container"><div class="gt-no-init"><p>未找到相关的 <a href="https://github.com/COSOR365/blogpinglun/issues">Issues</a> 进行评论</p><p>请联系 @COSOR365 初始化创建</p><button class="gt-btn gt-btn-login"><span class="gt-btn-text">使用 GitHub 登录</span></button></div></div></div>
-
-<script>
-
-  var gitalk = new Gitalk({
-    clientID: '9bc08c18a1db84650f18',
-    clientSecret: 'b204029540b0368617ecbc8e4f3dad5d2596a1f6',
-    repo: 'blogpinglun',
-    owner: 'COSOR365',
-    admin: ['COSOR365'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-
-  gitalk.render('gitalk-container')
-
-</script>
-
-          
+gitalk.render('gitalk-container')
 
           
         
